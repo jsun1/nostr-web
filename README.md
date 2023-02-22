@@ -1,6 +1,11 @@
-## Snort
+## Nostr
 
-Snort is a nostr UI built with React aiming for speed and efficiency.
+This is a fork of Snort, a nostr UI built with React.
+
+Modifications from the original:
+
+- Name changed to “Nostr” (2023-02-22)
+- Added license & changes notice (2023-02-22)
 
 Snort supports the following NIP's:
 
@@ -53,6 +58,7 @@ $ yarn build
 Translations are managed on [Crowdin](https://crowdin.com/project/snort)
 
 To extract translations run:
+
 ```bash
 yarn workspace @snort/app intl-extract
 yarn workspace @snort/app intl-compile

@@ -211,17 +211,22 @@ export default function Layout() {
     <div className={pageClass}>
       {!shouldHideHeader && (
         <header>
-          <div className="logo" onClick={() => navigate("/")}>
-            Snort
+          <div className="header-actions">
+            <div className="logo" onClick={() => navigate("/")}>
+              Nostr
+            </div>
+            <div>
+              {publicKey ? (
+                accountHeader()
+              ) : (
+                <button type="button" onClick={() => navigate("/login")}>
+                  <FormattedMessage {...messages.Login} />
+                </button>
+              )}
+            </div>
           </div>
-          <div>
-            {publicKey ? (
-              accountHeader()
-            ) : (
-              <button type="button" onClick={() => navigate("/login")}>
-                <FormattedMessage {...messages.Login} />
-              </button>
-            )}
+          <div className="legal-notice">
+          A fork of Snort with name changed to Nostr (2023-02-22). Released under <a href="https://github.com/jsun1/nostr-web/blob/main/LICENSE">GPL v3</a>.
           </div>
         </header>
       )}

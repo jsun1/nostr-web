@@ -155,7 +155,7 @@ export default function LoginPage() {
       <div>
         <div className="login-container">
           <div className="logo" onClick={() => navigate("/")}>
-            Snort
+            Nostr
           </div>
           <h1 dir="auto">
             <FormattedMessage defaultMessage="Login" description="Login header" />
